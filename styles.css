@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    /* Primary Colors */
+    --blue: hsl(246, 80%, 60%);
+    --lighter-red: hsl(15, 100%, 70%); /*(work)*/
+    --soft-blue: hsl(195, 74%, 62%); /*(play)*/
+    --light-red: hsl(348, 100%, 68%); /*(study)*/
+    --lime-green: hsl(145, 58%, 55%); /*(exercise)*/
+    --violet: hsl(264, 64%, 52%); /*(social)*/
+    --soft-orange: hsl(43, 84%, 65%); /*(self care)*/
+
+    /* Neutral Colors */
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(236, 45%, 20%);
+    --hover-dark-blue: hsla(236, 45%, 20%, .925);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+
+}
+
+* {
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	display: grid;
+    place-items: center;
+    min-height: 100vh;
+	background: var(--very-dark-blue);
+	font-family: Rubik;
+	color:  #e7e4e4;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 15rem);
+    gap: 20px;
+	padding: 0 4rem;
+}
+
+.profile {
+	display: grid;
+	padding: 2rem 2rem;
+	background: var(--blue);
+	border-radius: inherit;
+	height: 70%;
+}
+
+.profile-img {
+	width: 40%;
+	outline: .25rem solid #e7e4e4;
+	border-radius: 50%;
+}
+
+.profile p{
+	color: #e7e4e4b9;
+}
+
+p {
+	color: var(--desaturated-blue);
+}
+
+p span {
+	font-size: 2.5rem;
+	display: block;
+	color:  #e7e4e4;
+}
+
+.frequency {
+	padding: 1rem .75rem;
+	display: grid;
+	align-items: stretch;
+}
+
+.frequency a {
+	text-decoration: none;
+	color: var(--desaturated-blue);
+}
+
+.frequency a:hover, a.active, p.activity {
+	color:  #e7e4e4;
+}
+
+.card{
+	border-radius: 0.5rem;
+	display: grid;
+	align-items: end;
+	position: relative;
+}
+
+.card-img {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.main-card {
+	border-radius: 0.5rem;
+	grid-area: 1 / 1 / 3 / 2;
+	background: var(--dark-blue);
+}
+
+.inner-card {
+	background: var(--dark-blue);
+	height: 80%;
+	padding: 2rem 1rem;
+	border-radius: inherit;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: grid;
+	cursor: pointer;
+}
+
+.inner-card:hover {
+	background: var(--hover-dark-blue);
+}
+
+.card-title{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	font-size: 1.25rem;
+}
+
+.card-title span {
+	justify-self: end;
+}
+
+.time {
+	align-self: end;
+}
+
+.work {
+    grid-area: 1 / 2 / 2 / 3;
+	background: var(--lighter-red);
+}
+.play {
+    grid-area: 1 / 3 / 2 / 4;
+	background: var(--soft-blue);
+}
+.study {
+    grid-area: 1 / 4 / 2 / 5;
+	background: var(--light-red);
+}
+.exercise {
+    grid-area: 2 / 2 / 3 / 3;
+	background: var(--lime-green);
+}
+.social {
+    grid-area: 2 / 3 / 3 / 4;
+	background: var(--violet);
+}
+.self-care {
+    grid-area: 2 / 4 / 3 / 5;
+	background: var(--soft-orange);
+}
